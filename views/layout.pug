@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+	head
+		title Flash Cards
+		link(rel='stylesheet', href='/static/stylesheets/style.css')
+	body
+		include includes/header.pug
+		if (!error)
+			section.namecard
+				.namecard-hello
+					if name
+						p.namecard-greeting Welcome, #{name}!
+						form.namecard-exit(action='/goodbye', method='POST')
+							button(type='submit')
+								img(src='/static/img/close.svg')
+					else
+						p.namecard-greeting Welcome, student!
+				block content	
+		else 
+			block error
