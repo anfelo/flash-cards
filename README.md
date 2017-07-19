@@ -1,2 +1,2 @@
 # flash-cards app
-This is an Dynamic Node app, build in Express framework.
+This is a Dynamic Node.js app, build in Express framework.
